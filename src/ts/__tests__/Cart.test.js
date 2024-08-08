@@ -14,14 +14,14 @@ test('should add ites to cart', () => {
 });
 
 test('the sum of items in the cart should be 1830', () => {
-  cart.addItem(new Book(52, 'Call of Cthulhu', 1800, 1928, 'Howard Lovecraft', 120));
+  cart.addItem(new Book(52, 'Call of Cthulhu', 1800, 1928, 'Howard Lovecraft', 384));
   cart.addItem(new AudioAlbum(11, 'Run Through the Jungle', 30, 1970, ' Creedence'));
 
   expect(cart.getTotalPrice()).toBe(1830);
 });
 
 test('the sum of items with a 10% discount should be 1647', () => {
-  cart.addItem(new Book(52, 'Call of Cthulhu', 1800, 1928, 'Howard Lovecraft', 120));
+  cart.addItem(new Book(52, 'Call of Cthulhu', 1800, 1928, 'Howard Lovecraft', 384));
   cart.addItem(new AudioAlbum(11, 'Run Through the Jungle', 30, 1970, 'Creedence'));
 
   expect(cart.getTotalPriceWithDiscount(10)).toBe(1647);
